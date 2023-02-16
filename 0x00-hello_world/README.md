@@ -1,1 +1,1 @@
-Starting with C programming today
+This is my first C project
