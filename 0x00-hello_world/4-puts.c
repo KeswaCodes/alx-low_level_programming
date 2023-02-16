@@ -1,8 +1,9 @@
 #include <stdio.h>
 
 /**
-*main - The entry point
-*Return - This returns 0
+*main - The entry point*
+*Description: This program prints a string*
+*Return: Always 0(Success)
 */
 
 int main(void)
