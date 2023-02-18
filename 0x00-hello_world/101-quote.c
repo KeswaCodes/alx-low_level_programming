@@ -1,14 +1,11 @@
-#include <stdio.h>
-/**
- *main-Entry point*
- *Description: This program prints a set of strings*
- *Return:Always 0(Success)
- */
+#include <unistd.h>
 
+/**
+ * main - write to stdout
+ * Return: Always 0
+ */
 int main(void)
 {
-char[100] sentence="and that piece of art is useful\" - Dora Korpar";
-int date=2015-10-19;
-putchar("%c, %d", sentence, date);
-return(0);
-};
+	write(1, "and that piece of art is useful\" - Dora Korpar, 2015-10-19\n", 59);
+	return (1);
+}
