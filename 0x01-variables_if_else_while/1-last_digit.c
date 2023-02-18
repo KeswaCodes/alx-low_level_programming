@@ -4,8 +4,8 @@
 
 /**
  *main-the entry point
- *description:this print the last digit of the number stored in the variable n
- *return:this returns 0
+ *Description:this print the last digit of the number stored in the variable n
+ *Return:this returns 0
  */
 
 int main(void)
@@ -19,7 +19,7 @@ int main(void)
 	  printf("Last digit of %i is %i and is greater than 5\n", n, last);
 	else if (last == 0)
 	  printf("Last digit of %i is %i and is 0\n", n, last);
-	else if(last<6)
+	else if (last < 6)
 	  printf("Last digit of %i is %i and is less than 6 and not 0\n", n, last);
 	return (0);
 }
