@@ -3,7 +3,6 @@
  *swap_int- swaps the value of two integers
  *@a: first parameter
  *@b: second parameter
- *@temp: temporary storage
  *Return: void
  */
 
