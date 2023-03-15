@@ -12,7 +12,7 @@ char *ptr;
 int i;
 int length = 0;
 
-for (i = 0; i <= '\0'; i++)
+for (i = 0; str[length] != '\0'; i++)
 {
 length++;
 }
