@@ -27,7 +27,7 @@ if (ptr == NULL)
 return (NULL);
 }
 
-ptr = str;
+strcpy(ptr, str);
 
 return (ptr);
 
