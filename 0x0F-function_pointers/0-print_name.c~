@@ -1,0 +1,28 @@
+
+#include <stdlib.h>
+#include "function_pointers.h"
+
+/**
+ *print_name- prints a name
+ *@name: pointer to char as a parameter
+ *@f: a function pointer
+ *f_ptr: a callback function
+ */
+
+void f_ptr(char *)
+{
+if (char* == NULL)
+return;
+}
+void print_name(char *name, void (*f)(char *))
+{
+
+if (name == NULL)
+return;
+
+else
+{
+putchar(name);
+putchar("\n");
+}
+}
