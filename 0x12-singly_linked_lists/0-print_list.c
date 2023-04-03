@@ -15,16 +15,18 @@ size_t i = 1;
 h = malloc(sizeof(struct list_s));
 if (h == NULL)
 return (0);
+
 do {
 if (h->str == NULL)
 {
-printf("[%d] (%s) \n", 0, "(nil)");
+printf("[%d] %s \n", 0, "(nil)");
 }
-printf("%u %s \n", h->len, h->str);
+else
+printf("%d %s \n", h->len, h->str);
 h = h->next;
 i++;
 } while (h->next != NULL);
-printf("%u %s \n", h->len, h->str);
 
+printf("%d %s \n", h->len, h->str);
 return (i);
 }
