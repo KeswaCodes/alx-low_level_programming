@@ -15,15 +15,11 @@ int i = 1;
 h = malloc(sizeof(struct list_s));
 if (h == NULL)
 return (0);
-printf("%u %s \n", h->len, h->str);
-i += 1;
-
+do {
 if (h->str == NULL)
 {
 printf("[%d] (%s) \n", 0, "(nil)");
 }
-else
-do {
 printf("%u %s \n", h->len, h->str);
 h = h->next;
 i++;
