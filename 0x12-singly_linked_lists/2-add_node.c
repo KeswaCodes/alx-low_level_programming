@@ -1,3 +1,4 @@
+#include <string.h>
 #include <stdlib.h>
 #include "lists.h"
 
@@ -18,7 +19,7 @@ s_length = 0;
 
 do {
 s_length++;
-} while (str[str_len] != '\0');
+} while (str[s_length] != '\0');
 
 node_ptr = malloc(sizeof(list_t));
 if (node_ptr == NULL)
@@ -30,7 +31,7 @@ else
 node_ptr->next = *head;
 
 node_ptr->str = strdup(str);
-node_ptr->len = s_length
+node_ptr->len = s_length;
 *head = node_ptr;
 
 return (*head);
