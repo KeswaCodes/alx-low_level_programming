@@ -2,23 +2,21 @@
 #include "lists.h"
 
 /**
- *free_listint- freees a linked list
- *@head: pointer to first node
- *Return: void
+ *free_listint- frees memory allocated to a singly linked list
+ *@head: pointer to the first node
+ *Return: Void;
  */
 
 void free_listint(listint_t *head)
 {
-struct listint_s *temp;
-
-temp = head;
-
-while (temp->next != NULL)
+struct listint_s *lead_ptr = head;
+if (head == NULL)
+exit(1);
+while (lead_ptr != NULL)
 {
-head = temp;
-temp = temp->next;
+lead_ptr = lead_ptr->next;
 free(head);
-head = temp;
+head = lead_ptr;
 }
-free(temp);
+free(lead_ptr);
 }

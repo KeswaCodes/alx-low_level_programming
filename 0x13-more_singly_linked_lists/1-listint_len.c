@@ -9,18 +9,17 @@
 
 size_t listint_len(const listint_t *h)
 {
-size_t elements = 1;
-listint_t *ptr = h;
+size_t elements = 0;
 
 if (h == NULL)
 {
 return (0);
 }
-do {
-
+while (h->next != NULL)
+{
 elements++;
-} while (ptr->next != NULL);
-
+h = h->next;
+}
 elements += 1;
 
 return (elements);

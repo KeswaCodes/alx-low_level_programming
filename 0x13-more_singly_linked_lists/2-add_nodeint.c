@@ -16,11 +16,9 @@ struct listint_s *new_node;
 new_node = malloc(sizeof(struct listint_s));
 
 if (new_node == NULL)
-{
 return (NULL);
-}
 
-else
+
 new_node->n = n;
 new_node->next = *head;
 *head = new_node;
