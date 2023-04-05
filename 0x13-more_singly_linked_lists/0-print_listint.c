@@ -1,4 +1,3 @@
-#include <stdlib.h>
 #include <stdio.h>
 #include "lists.h"
 
@@ -17,15 +16,12 @@ return (0);
 
 while (h->next != NULL)
 {
-
 printf("%d \n", h->n);
 nodes++;
 h = h->next;
 }
 
-printf("%d\n", h->n);
-
-
+printf("%d \n", h->n);
 
 return (nodes);
 }
