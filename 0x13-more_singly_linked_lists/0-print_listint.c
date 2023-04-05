@@ -17,8 +17,9 @@ return (0);
 
 while (h->next != NULL)
 {
-nodes++;
+
 printf("%d \n", h->n);
+nodes++;
 h = h->next;
 }
 
