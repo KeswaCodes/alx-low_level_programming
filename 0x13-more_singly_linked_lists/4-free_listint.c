@@ -10,13 +10,14 @@
 void free_listint(listint_t *head)
 {
 struct listint_s *lead_ptr = head;
-if (head == NULL)
-exit(1);
+
+
 while (lead_ptr != NULL)
 {
-lead_ptr = lead_ptr->next;
+
 free(head);
+lead_ptr = lead_ptr->next;
 head = lead_ptr;
 }
-free(lead_ptr);
+
 }
