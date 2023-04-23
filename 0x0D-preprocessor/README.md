@@ -1,1 +1,0 @@
-This folder contains all my projects under the preprocessor and macros.	
