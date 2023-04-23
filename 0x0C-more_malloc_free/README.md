@@ -1,1 +1,0 @@
-More memory allocation functions(malloc, calloc, realloc, free)
