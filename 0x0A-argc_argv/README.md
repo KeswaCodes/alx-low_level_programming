@@ -1,1 +1,0 @@
-This folder contains my projects under the command line arguments(argc, argv).
