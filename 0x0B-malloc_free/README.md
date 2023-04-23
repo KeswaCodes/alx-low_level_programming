@@ -1,1 +1,0 @@
-This folder contains all my projects on the memory allocation(malloc and free) work.
