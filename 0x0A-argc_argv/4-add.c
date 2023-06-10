@@ -4,24 +4,32 @@
  *@argv: argument vector
  *Return: result of the addition
  */
-
+#include <stdlib.h>
 #include <stdio.h>
-
+#include <ctype.h>
 int main(int argc, char *argv[])
 {
 
-  if (argc < 2)
-    {
-      printf("0");
-      printf("\n");
-    }
-  else
 
-    {
-for (int i = 1; i < argc; i++)
-  {
-        char* arg = argv[i];
-	if 
-        
-  }
+int j;
+int sum = 0;
+for (j = 1; j < argc; j++)
+{
+
+int argument = atoi(argv[j]);
+if (argument)
+{
+sum += argument;
 }
+else
+{
+printf("Error");
+printf("\n");
+return (1);
+}
+}
+printf("%d", sum);
+printf("\n");
+return (sum);
+
+}  
