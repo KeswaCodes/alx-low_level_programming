@@ -15,7 +15,7 @@ va_list args;
 va_start(args, format);
 while (format[i] != '\0')
 {
-  
+
 switch (format[i])
 {
 case 'c':
@@ -37,7 +37,6 @@ string = "(nil)";
 printf("%s", string);
 
 default:
-;
 break;
 }
 
