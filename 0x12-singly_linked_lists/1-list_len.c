@@ -11,7 +11,12 @@ size_t nodes = 0;
 const list_t *ptr = h;
 
 for (ptr = h; ptr->next != NULL; ptr = ptr->next)
+{
+if (ptr->str == NULL)
+return (nodes);
+else
 nodes++;
+}
 
 nodes++;
 return (nodes);
