@@ -8,17 +8,18 @@
 size_t list_len(const list_t *h)
 {
 size_t nodes = 0;
-const list_t *ptr = h;
+const list_t *ptr;
 
 for (ptr = h; ptr->next != NULL; ptr = ptr->next)
 {
-if (ptr->str == NULL)
+if (ptr->next == NULL)
 return (nodes);
 else
 nodes++;
-}
 
+}
 nodes++;
+
 return (nodes);
 
 }
