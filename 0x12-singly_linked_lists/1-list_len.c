@@ -12,10 +12,11 @@ const list_t *ptr;
 
 for (ptr = h; ptr->next != NULL; ptr = ptr->next)
 {
-if (h == NULL)
-return (nodes);
-else
+if (ptr->next != NULL)
 nodes++;
+
+else
+return (nodes);
 
 }
 nodes++;
