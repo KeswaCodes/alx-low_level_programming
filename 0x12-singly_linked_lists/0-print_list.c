@@ -11,9 +11,6 @@ size_t print_list(const list_t *h)
 size_t nodes = 0;
 const list_t *ptr;
 
-if (h == NULL)
-return (0);
-
 for (ptr = h; ptr->next != NULL; ptr = ptr->next)
 {
 if (ptr->str == NULL)
@@ -30,3 +27,5 @@ nodes++;
 
 return (nodes);
 }
+
+
