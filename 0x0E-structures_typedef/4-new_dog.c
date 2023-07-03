@@ -29,7 +29,7 @@ if (dog->name == NULL)
 return (NULL);
 else
   /* copy the name string */
-while (name[name_index] != '\0')
+while (name_index < i)
 {
 dog->name[name_index] = name[name_index];
 name_index++;
@@ -42,14 +42,12 @@ return (NULL);
 
 else
   /* copy owner string */
-while (owner[owner_index] != '\0')
+while (owner_index < j)
 {
 dog->owner[owner_index] = owner[owner_index];
 owner_index++;
 }
 dog->age = age;
-
-
 
 return (dog);
 }
