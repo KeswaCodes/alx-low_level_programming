@@ -1,5 +1,5 @@
- /**
- *struct dog- the struct of a dog
+#include "dog.h"
+  /**
  *init_dog- initializes a variable of type struct dog
  *@d: pointer to struct
  *@name: dog's name as parameter
@@ -8,30 +8,10 @@
  *Return: void
  */
 
-struct dog 
-{
-char *name;
-float age;
-char *owner;
-};
-
 void init_dog(struct dog *d, char *name, float age, char *owner)
 {
-
-int i = 0, j = 0;
+d->name = name;
 d->age = age;
-for( i = 0; name[i] != '\0'; i++)
-{
-d->name[i] = name[i];
-i++;
-}
-
-
-
-for(j = 0; owner[j] != '\0'; j++)
-{
-d->owner[j] = owner[j];
-j++;
-}
+d->owner = owner;
 
 }
