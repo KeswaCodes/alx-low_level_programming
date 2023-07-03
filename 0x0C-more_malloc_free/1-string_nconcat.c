@@ -3,23 +3,24 @@
 /**
  *use_s2- returns a string s2
  *@s2: string to be printed
- *@ptr: malloc'd space
- *@len2: length of string
  *Return: s2 in malloced string
  */
 
-char *use_s2(char *s2, char *ptr, int len2)
+char *use_s2(char *s2)
 {
-int i = 0;
+int i, len = 0;
+char *ptr;
 
-if (s2 == NULL)
-s2 = "";
+while (s2[len] != '\0')
+len++;
 
-while (i <= len2)
+ptr = malloc(len + 1);
+
+for (i = 0; s2[i] != '\0'; i++)
 ptr[i] = s2[i];
-i++;
 
 ptr[i] = '\0';
+
 return (ptr);
 }
 
@@ -50,20 +51,20 @@ return (NULL);
 /* Determine the length of s2 */
 for (len2 = 0; s2[len2] != '\0'; len2++)
 ;
-if (n > len2 || n == len2)
-return (use_s2(s2, ptr, len2));
+if (n >= len2)
+return (use_s2(s2));
 
 
 if (s1 == NULL)
 s1 = "";
 
-for (i = 0; i < len1; i++)
+for (i = 0; s1[i] != '\0'; i++)
 ptr[i] = s1[i];
 
 if (s2 == NULL)
 s2 = "";
 
-for (j = 0; j < n; j++)
+for (j = 0; j <= n; j++)
 ptr[len1 + j] = s2[j];
 
 ptr[len1 + j] = '\0';
