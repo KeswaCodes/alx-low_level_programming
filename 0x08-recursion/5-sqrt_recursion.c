@@ -17,7 +17,7 @@ if (square > n)
 return (-1);
 
 return (sqrt_check(n, x + 1));
- 
+
 }
 
 /**
@@ -33,7 +33,7 @@ if (n == 0)
 return (0);
 
 
-return sqrt_check(n, 1);
+return (sqrt_check(n, 1));
 
 }
 
