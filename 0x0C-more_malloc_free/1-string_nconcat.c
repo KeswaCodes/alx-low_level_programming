@@ -64,7 +64,7 @@ ptr[i] = s1[i];
 if (s2 == NULL)
 s2 = "";
 
-for (j = 0; j <= n; j++)
+for (j = 0; j < n; j++)
 ptr[len1 + j] = s2[j];
 
 ptr[len1 + j] = '\0';
