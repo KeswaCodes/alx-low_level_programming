@@ -1,46 +1,74 @@
+#include "main.h"
+
 /**
- *string_nconcat- concatenates two strings
- *@s1: first string
- *@s2: second string
- *@n: size in bytesfor string two
- *Return: pointer to allocated memory(success), NULL(failure)
+ *use_s2- returns a string s2
+ *@s2: string to be printed
+ *@ptr: malloc'd space
+ *@len2: length of string
+ *Return: s2 in malloced string
  */
 
-#include "main.h"
-#include <stdlib.h>
-char *string_nconcat(char *s1, char *s2, unsigned int n)
+char *use_s2(char *s2, char *ptr, int len2)
 {
-int z = 0;
-int j = 0;
 int i = 0;
-int new_str_len;
-char *ptr;
-unsigned int s1_size;
-unsigned int s2_len = 0;
-int s2_use = 0;
-if (s1 == NULL)
-s1 = "";
-while (*(s1 + i) != '\0')
-i++;
-s1_size = sizeof(char) * i;
-new_str_len = s1_size + n;
-ptr = malloc(sizeof(*ptr) * new_str_len);
+
 if (s2 == NULL)
 s2 = "";
-while (*(s2 + s2_len) != '\0')
-s2_len++;
+
+while (i <= len2)
+ptr[i] = s2[i];
+i++;
+
+ptr[i] = '\0';
+return (ptr);
+}
+
+/**
+ *string_nconcat- concatenates 2 strings
+ *@s1: first string
+ *@s2: second string
+ *@n: n byte of s2
+ *Return: pointer to newly allocated memory
+ */
+
+char *string_nconcat(char *s1, char *s2, unsigned int n)
+{
+
+char *ptr;
+unsigned int len1, len2, i, j;
+
+
+/* Determine the length of s1 */
+for (len1 = 0; s1[len1] != '\0'; len1++)
+;
+
+ptr = malloc((len1 + n) + 1);
 
 if (ptr == NULL)
 return (NULL);
-if (n >= s2_len)
-ptr[s2_use] = s2[s2_use];
 
-else
-while (*(s1 + j) != '\0')
-ptr[j] = s1[j];
-j++;
-while ((*s2 + z) != '\0')
-ptr[j + z] = s2[z];
-ptr[j + z] = '\0';
+/* Determine the length of s2 */
+for (len2 = 0; s2[len2] != '\0'; len2++)
+;
+if (n >= len2)
+return (use_s2(s2, ptr, len2));
+
+if (s1 == NULL)
+s1 = "";
+
+if (s2 == NULL)
+s2 = "";
+
+for (i = 0; i <= len1; i++)
+ptr[i] = s1[i];
+
+
+for (j = 0; j <= n; j++)
+ptr[len1 + j] = s2[j];
+
+ptr[len1 + j] = '\0';
+
+
 return (ptr);
 }
+
