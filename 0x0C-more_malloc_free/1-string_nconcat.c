@@ -59,11 +59,12 @@ s1 = "";
 if (s2 == NULL)
 s2 = "";
 
-for (i = 0; i <= len1; i++)
+
+for (i = 0; i < len1; i++)
 ptr[i] = s1[i];
 
 
-for (j = 0; j <= n; j++)
+for (j = 0; j < n; j++)
 ptr[len1 + j] = s2[j];
 
 ptr[len1 + j] = '\0';
