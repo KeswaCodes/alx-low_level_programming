@@ -15,6 +15,8 @@ dog_t *new_dog(char *name, float age, char *owner)
 int name_index = 0, owner_index = 0, i = 0, j = 0;
 dog_t *dog;
 dog = malloc(sizeof(dog_t));
+if (dog == NULL)
+return (NULL);
 
 for (i = 0; name[i] != '\0'; i++)
 ;
@@ -26,6 +28,7 @@ dog->name = malloc(sizeof(char) * i);
 if (dog->name == NULL)
 return (NULL);
 else
+  /* copy the name string */
 while (name[name_index] != '\0')
 {
 dog->name[name_index] = name[name_index];
@@ -38,6 +41,7 @@ if (dog->owner == NULL)
 return (NULL);
 
 else
+  /* copy owner string */
 while (owner[owner_index] != '\0')
 {
 dog->owner[owner_index] = owner[owner_index];
