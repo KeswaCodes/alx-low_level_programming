@@ -50,19 +50,18 @@ return (NULL);
 /* Determine the length of s2 */
 for (len2 = 0; s2[len2] != '\0'; len2++)
 ;
-if (n >= len2)
+if (n > len2 || n == len2)
 return (use_s2(s2, ptr, len2));
+
 
 if (s1 == NULL)
 s1 = "";
 
-if (s2 == NULL)
-s2 = "";
-
-
 for (i = 0; i < len1; i++)
 ptr[i] = s1[i];
 
+if (s2 == NULL)
+s2 = "";
 
 for (j = 0; j < n; j++)
 ptr[len1 + j] = s2[j];
