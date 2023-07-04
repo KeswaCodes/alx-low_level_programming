@@ -15,13 +15,13 @@ return;
 }
 
 
-while (*head != NULL)
+while (*head)
 {
 temp = (*head)->next;
 free(*head);
 *head = temp;
 }
-free(*head);
+
 *head = NULL;
 return;
 }
