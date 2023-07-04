@@ -19,5 +19,6 @@ free(*head);
 *head = temp;
 }
 *head = NULL;
+if (*head == NULL)
 return;
 }
