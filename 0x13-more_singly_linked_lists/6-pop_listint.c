@@ -17,8 +17,9 @@ return (0);
 
 temp = *head;
 head_node_data = temp->n;
-*head = (*head)->next;
-free(temp);
+temp = (*head)->next;
+free(*head);
+*head = temp;
 
 return (head_node_data);
 }
