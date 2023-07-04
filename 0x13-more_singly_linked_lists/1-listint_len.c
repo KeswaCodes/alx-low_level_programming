@@ -9,6 +9,8 @@ size_t listint_len(const listint_t *h)
 {
 size_t nodes = 0;
 const listint_t *ptr;
+if (h == NULL)
+return (nodes);
 
 for (ptr = h; ptr->next != NULL; ptr = ptr->next)
 nodes++;
