@@ -1,6 +1,6 @@
 #include "lists.h"
 /**
- *free_listint2- frees a lsitint_t list, & sets head to NULL
+ *free_listint2- frees a listint_t list, & sets head to NULL
  *@head: ppointer to head pointer
  *Return: void
  */
@@ -14,14 +14,14 @@ if (*head == NULL)
 return;
 }
 
-
-while (*head != NULL)
+temp = *head;
+while (temp->next != NULL)
 {
 temp = (*head)->next;
 free(*head);
 *head = temp;
 }
-
+free(*head);
 *head = NULL;
 
 }
