@@ -15,7 +15,7 @@ return;
 }
 
 
-while (*head)
+while (*head != NULL)
 {
 temp = (*head)->next;
 free(*head);
@@ -23,5 +23,5 @@ free(*head);
 }
 
 *head = NULL;
-return;
+
 }
