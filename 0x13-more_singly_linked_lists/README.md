@@ -11,10 +11,9 @@ The prototypes of all your functions and the prototype of the function _putchar 
 FUNCTIONS:
 
 0-print_listint.c :
-
-Write a function that prints all the elements of a listint_t list.
-Prototype: size_t print_listint(const listint_t *h);
-Return: the number of nodes
+A function that prints all the elements of a listint_t list.
 You are allowed to use printf.
 
+1-listint_len.c :
+Returns the number of elements in a linked listint_t list.
 
