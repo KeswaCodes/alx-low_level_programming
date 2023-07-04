@@ -19,4 +19,5 @@ free(*head);
 *head = temp;
 }
 *head = NULL;
+return;
 }
