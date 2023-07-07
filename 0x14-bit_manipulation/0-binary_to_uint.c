@@ -15,14 +15,16 @@ unsigned int result = 0, product = 1, str_len = 0, i = 0;
 if (!b)
 return (0);
 
-if (b[i] == '\0')
-return (0);
+
 
 while (b[str_len] != '\0')
 str_len++;
 
 for (i = str_len; i > 0; i--)
 {
+if (b[i - 1] == '\0')
+return (0);
+
 switch (b[i - 1])
 {
 case '0':
