@@ -12,17 +12,11 @@ unsigned int binary_to_uint(const char *b)
 {
 unsigned int result = 0, product = 1, str_len = 0, i = 0;
 
-if (!b)
+if (b == NULL)
 return (0);
 
 while (b[str_len] != '\0')
-{
-if (b[str_len] == 0 || b[str_len == 1])
 str_len++;
-else
-return (0);
-}
-
 for (i = str_len; i > 0; i--)
 {
 
