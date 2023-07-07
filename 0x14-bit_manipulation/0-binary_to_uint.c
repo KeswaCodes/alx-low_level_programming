@@ -10,11 +10,13 @@
 
 unsigned int binary_to_uint(const char *b)
 {
-unsigned int result = 0, product = 1, str_len = 0, i;
+unsigned int result = 0, product = 1, str_len = 0, i = 0;
 
 if (!b)
 return (0);
 
+if (b[i] == '\0')
+return (0);
 
 while (b[str_len] != '\0')
 str_len++;
