@@ -12,8 +12,9 @@ unsigned int binary_to_uint(const char *b)
 {
 unsigned int result = 0, product = 1, str_len = 0, i;
 
-if (b == NULL)
+if (!b)
 return (0);
+
 
 while (b[str_len] != '\0')
 str_len++;
