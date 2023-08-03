@@ -15,3 +15,7 @@ The prototypes of all your functions and the prototype of the function _putchar 
 Don’t forget to push your header file
 All your header files should be include guarded
 
+Executable files :
+a, b, c, d & e are to be run as "./*executable file*"
+
+Test files are found in the directory test_files. 
