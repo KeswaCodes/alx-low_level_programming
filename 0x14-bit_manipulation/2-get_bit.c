@@ -14,9 +14,9 @@ int bit;
 if (n < 1)
 return (-1);
 
-
-if (n == 0)
+if (index >= sizeof(unsigned long int) * 8)
 return (-1);
+
 
 mask = 1 << index;
 
