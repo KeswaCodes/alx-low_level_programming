@@ -8,7 +8,7 @@
 
 int create_file(const char *filename, char *text_content)
 {
-int fd;
+int fd, file_close;
 ssize_t n_write;
 size_t i = 0;
 
@@ -22,22 +22,27 @@ return (-1);
 if (text_content == NULL)
 {
 n_write = write(fd, "", 1);
-close(fd);
+file_close = close(fd);
+if (file_close == -1)
+return (-1);
+
 return (1);
 }
 
 while (text_content[i] != '\0')
 i++;
 
-i++;
 n_write = write(fd, text_content, i);
 if (n_write == -1)
 {
-close(fd);
+file_close = close(fd);
+if (file_close == -1)
 return (-1);
 }
 
+file_close = close(fd);
+if (file_close == -1)
+return (-1);
 
-close(fd);
 return (1);
 }
