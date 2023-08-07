@@ -22,15 +22,9 @@ return (-1);
 if (text_content == NULL)
 {
 n_write = write(fd, "", 1);
-if (n_write == -1)
-{
-close(fd);
-return (-1);
-     
-}
-
 file_close = close(fd);
-if (file_close == -1)
+
+if (n_write == -1 && file_close == -1)
 return (-1);
 
 else
