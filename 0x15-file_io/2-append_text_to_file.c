@@ -13,7 +13,7 @@ ssize_t n_write;
 
 if (filename == NULL)
 return (-1);
-  
+
 fd = open(filename, O_WRONLY | O_APPEND);
 if (fd == -1)
 return (-1);
@@ -38,5 +38,5 @@ else
 close(fd);
 return (1);
 }
-  
+
 }
