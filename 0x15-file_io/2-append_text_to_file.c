@@ -29,9 +29,14 @@ if (n_write == -1)
 close(fd);
 return (-1);
 }
-}
-
 close(fd);
 return (1);
+}
+
+else
+{
+close(fd);
+return (1);
+}
   
 }
