@@ -27,10 +27,9 @@ return (1);
 }
 
 while (text_content[i] != '\0')
-{
 i++;
-}
 
+i++;
 n_write = write(fd, text_content, i);
 if (n_write == -1)
 {
