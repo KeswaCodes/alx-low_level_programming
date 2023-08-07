@@ -39,7 +39,7 @@ exit(98);
 }
 
 destination = argv[2];
-fd_des = open(destination, O_WRONLY | O_CREAT | O_EXCL | O_TRUNC, 0664);
+fd_des = open(destination, O_WRONLY | O_CREAT | O_TRUNC | O_EXCL, 0664);
 if (fd_des == -1)
 {
 dprintf(2, "Can't write to file %s\n", argv[2]);
