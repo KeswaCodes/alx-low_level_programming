@@ -27,11 +27,14 @@ if (index == 0)
 {
 *head = (*head)->next;
 (*head)->prev = NULL;
+free(delete_ptr);
 }
 
 else if (index == (list_len - 1))
+{
 delete_ptr->prev = NULL;
-
+free(delete_ptr);
+}
 else
 {
 while (position < index)
@@ -41,8 +44,8 @@ delete_ptr = delete_ptr->next;
 }
 delete_ptr->prev->next = delete_ptr->next;
 delete_ptr->next->prev = delete_ptr->prev;
-}
- 
 free(delete_ptr);
+}
+
 return (1);
 }
