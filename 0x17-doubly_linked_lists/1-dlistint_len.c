@@ -20,6 +20,12 @@ n_lmnt++;
 if (h->next == NULL)
 return (n_lmnt);
 temp = h->next;
+
+if (temp->next == NULL)
+{
+n_lmnt++;
+return (n_lmnt);
+}
 }
 
 while (temp != NULL)
@@ -27,11 +33,6 @@ while (temp != NULL)
 if (!temp->n)
 continue;
 
-if (temp->next == NULL)
-{
-n_lmnt++;
-return (n_lmnt);
-}
 n_lmnt++;
 temp = temp->next;
 }
