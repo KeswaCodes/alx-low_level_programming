@@ -19,9 +19,9 @@ else
 n_lmnt++;
 if (h->next == NULL)
 return (n_lmnt);
-temp = h->next;
 
-if (temp->next == NULL)
+temp = h->next;
+if (h->next->next == NULL)
 {
 n_lmnt++;
 return (n_lmnt);
